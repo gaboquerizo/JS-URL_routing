@@ -3,16 +3,23 @@
 :root {
     --color-primary: #e60023;
     --color-FF: #ffffff;
-    --color-F1: #f1f1f1;
-    --color-E1: #e1e1e1;
+    --color-F7: #f7f7f7;
+    --color-EF: #efefef;
+    --color-E7: #e7e7e7;
+    --color-DF: #dfdfdf;
+    --color-D7: #d7d7d7;
+    --color-DE: #dedede;
     --color-76: #767676;
     --color-6E: #6e6e6e;
+    --color-00: #000000;
 
     --space-025: .25em;
     --space-050: .5em;
+    --space-075: .75em;
     --space-100: 1em;
     --space-150: 1.5em;
     --space-200: 2em;
+    --space-300: 3em;
     
     --size-1: 1em;
     --size-2: 1.5em;
@@ -20,6 +27,7 @@
     --size-4: 2.5em;
 
     --round: 3em;
+    --tumix: .8em;
 }
 
 /* . . . Reset Standard Style . . . */
@@ -28,8 +36,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 18px;
     font-family: system-ui, -apple-system, sans-serif;
+    font-size: 18px;
+    color: var(--color-00);
 }
 
 input {
@@ -37,11 +46,44 @@ input {
     outline: none;
 }
 
-/* . . . Reset Standard Style . . . */
+a {
+    text-decoration: none;
+}
+
+/* . . . HTMLElement Styles . . . */
 
 body {
-    background-color: #fff;
+    background-color: var(--color-F7);
 }
+
+main {
+    height: 100vh;
+}
+
+footer {
+    font-weight: 500;
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+main header, footer {
+    padding: 1em;
+}
+
+svg.icon {
+    width: var(--size-2);
+    height: var(--size-2);
+    color: var(--color-76);
+    fill: var(--color-76);
+}
+
+svg.logo {
+    color: var(--color-primary);
+    fill: var(--color-primary);
+}
+
+/* . . . Reusable Styles . . . */
 
 .flex-row {
     display: flex;
@@ -60,39 +102,32 @@ body {
 
 .fx-between {
     justify-content: space-between;
-    align-content: space-between;
+    align-items: space-between;
 }
 
 .fx-center_between {
     justify-content: center;
-    align-content: space-between;
+    align-items: space-between;
 }
 
 .fx-between_center {
     justify-content: space-between;
-    align-content: center;
+    align-items: center;
 }
 
-svg.icon {
-    width: var(--size-2);
-    height: var(--size-2);
-    color: var(--color-76);
-    fill: var(--color-76);
-}
-
-svg.logo {
-    color: var(--color-primary);
-    fill: var(--color-primary);
-}
+/* . . . Class Styles . . . */
 
 .search-bar {
-
+    display: flex;
+    width: 50%;
+    margin-inline: var(--space-100);
     label {
+        width: 100%;
         border-radius: var(--round);
-        background-color: var(--color-F1);
+        background-color: var(--color-EF);
         padding: .5em 1em;
         &:hover, &:focus-within {
-            background-color: var(--color-E1);
+            background-color: var(--color-E7);
         }
     }
 
@@ -113,7 +148,7 @@ svg.logo {
     border-radius: var(--round);
     cursor: pointer;
     &:hover {
-        background-color: var(--color-F1);
+        background-color: var(--color-EF);
     }
 }
 
@@ -128,6 +163,33 @@ svg.logo {
     height: var(--size-2);
 }
 
-main header {
-    padding: 1em;
+.main-content {
+    margin: var(--space-200);
+    gap: var(--space-150);
+    max-width: 100%;
+    height: 100%;
+    
+    aside {
+        min-width: 20%;
+        margin-left: var(--space-100);
+    }
+
+    nav {
+        max-width: max-content;
+        gap: var(--space-050);
+    }
+
+    a {
+        padding: var(--space-050) var(--space-075);
+        border-radius: var(--tumix);
+        font-weight: 500;
+        &:hover {
+            background-color: var(--color-EF);
+        }
+    }
+}
+
+.rendering-area {
+    max-width: 670px;
+    width: 60%;
 }
