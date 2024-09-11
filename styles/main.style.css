@@ -1,0 +1,133 @@
+/* . . . Root . . . */
+
+:root {
+    --color-primary: #e60023;
+    --color-FF: #ffffff;
+    --color-F1: #f1f1f1;
+    --color-E1: #e1e1e1;
+    --color-76: #767676;
+    --color-6E: #6e6e6e;
+
+    --space-025: .25em;
+    --space-050: .5em;
+    --space-100: 1em;
+    --space-150: 1.5em;
+    --space-200: 2em;
+    
+    --size-1: 1em;
+    --size-2: 1.5em;
+    --size-3: 2em;
+    --size-4: 2.5em;
+
+    --round: 3em;
+}
+
+/* . . . Reset Standard Style . . . */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+/* . . . Reset Standard Style . . . */
+
+body {
+    background-color: #fff;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.fx-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.fx-between {
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.fx-center_between {
+    justify-content: center;
+    align-content: space-between;
+}
+
+.fx-between_center {
+    justify-content: space-between;
+    align-content: center;
+}
+
+svg.icon {
+    width: var(--size-2);
+    height: var(--size-2);
+    color: var(--color-76);
+    fill: var(--color-76);
+}
+
+svg.logo {
+    color: var(--color-primary);
+    fill: var(--color-primary);
+}
+
+.search-bar {
+
+    label {
+        border-radius: var(--round);
+        background-color: var(--color-F1);
+        padding: .5em 1em;
+        &:hover, &:focus-within {
+            background-color: var(--color-E1);
+        }
+    }
+
+    input {
+        background-color: transparent;
+        color: var(--color-6E);
+        margin-left: .4em;
+    }
+}
+
+.user-bar {
+    gap: var(--space-025);
+}
+
+.user-bar a{
+    display: flex;
+    padding: var(--space-050);
+    border-radius: var(--round);
+    cursor: pointer;
+    &:hover {
+        background-color: var(--color-F1);
+    }
+}
+
+.user-bar img {
+    border-radius: var(--round);
+}
+
+.user-bar img ,
+.user-bar svg.icon,
+svg.logo {
+    width: var(--size-2);
+    height: var(--size-2);
+}
+
+main header {
+    padding: 1em;
+}
