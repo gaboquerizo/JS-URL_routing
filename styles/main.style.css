@@ -11,6 +11,7 @@
     --color-DE: #dedede;
     --color-76: #767676;
     --color-6E: #6e6e6e;
+    --color-TX: #111111;
     --color-00: #000000;
 
     --space-025: .25em;
@@ -38,7 +39,7 @@
     box-sizing: border-box;
     font-family: system-ui, -apple-system, sans-serif;
     font-size: 18px;
-    color: var(--color-00);
+    color: var(--color-TX);
 }
 
 input {
@@ -67,7 +68,7 @@ footer {
     }
 }
 
-main header, footer {
+main > header, footer {
     padding: 1em;
 }
 
@@ -78,9 +79,23 @@ svg.icon {
     fill: var(--color-76);
 }
 
-svg.logo {
-    color: var(--color-primary);
-    fill: var(--color-primary);
+.logo {
+    gap: var(--space-050);
+    a {
+        padding: var(--space-025);
+        background-color: var(--color-primary);
+        border-radius: var(--round);
+    }
+    svg {
+        width: var(--size-1);
+        height: var(--size-1);
+        fill: var(--color-FF);
+    }
+    h1 {
+        font-size: 1.5em;
+        font-weight: 700;
+        color: var(--color-primary);
+    }
 }
 
 /* . . . Reusable Styles . . . */
@@ -163,7 +178,7 @@ svg.logo {
     height: var(--size-2);
 }
 
-.main-content {
+main > article {
     margin: var(--space-200);
     gap: var(--space-150);
     max-width: 100%;
@@ -183,6 +198,7 @@ svg.logo {
         padding: var(--space-050) var(--space-075);
         border-radius: var(--tumix);
         font-weight: 500;
+        cursor: default;
         &:hover {
             background-color: var(--color-EF);
         }
